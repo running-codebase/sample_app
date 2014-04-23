@@ -1,7 +1,22 @@
-................................................................
+.........................................F..................................................................................
 
-Finished in 2.08 seconds
-64 examples, 0 failures
+Failures:
 
-Randomized with seed 46709
+  1) User following and unfollowing followed user followers 
+     Failure/Error: its(:followers) { should include(@user) }
+       expected #<ActiveRecord::Associations::CollectionProxy []> to include #<User id: 91, name: "Example User", email: "user@example.com", created_at: "2014-04-21 20:45:57", updated_at: "2014-04-21 20:45:57", password_digest: "$2a$04$3fPBlF0awZA2UY5gqv//7.MKXoY1rz7YAP0DWxHBb4N5...", remember_token: "d2757bc9927c5cdf9e2f6870ab9e682da04cd576", admin: false>
+       Diff:
+       @@ -1,2 +1,2 @@
+       -[#<User id: 91, name: "Example User", email: "user@example.com", created_at: "2014-04-21 20:45:57", updated_at: "2014-04-21 20:45:57", password_digest: "$2a$04$3fPBlF0awZA2UY5gqv//7.MKXoY1rz7YAP0DWxHBb4N5...", remember_token: "d2757bc9927c5cdf9e2f6870ab9e682da04cd576", admin: false>]
+       +[]
+     # ./spec/models/user_spec.rb:181:in `block (5 levels) in <top (required)>'
+
+Finished in 11.95 seconds
+124 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/user_spec.rb:181 # User following and unfollowing followed user followers 
+
+Randomized with seed 5892
 
